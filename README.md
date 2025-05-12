@@ -58,8 +58,6 @@ curl http://localhost:3003/health
 
 ## Screenshots
 
-Screenshots should be hosted and linked here:
-
 ```md
 ![Screenshot 1](./Screenshots/1.png)
 ![Screenshot 2](./Screenshots/2.png)
