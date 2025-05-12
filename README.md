@@ -56,7 +56,7 @@ curl http://localhost:3003/health
 - `GET /api/orders` → Fetch orders
 - `POST /api/orders` → Create a new order
 
-## Screenshots (Uniform Dimensions Recommended)
+## Screenshots
 
 Screenshots should be hosted and linked here:
 
