@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  user-service:
+    build: ./user-service
+    ports:
+      - "3000:3000"
+    command: node app.js
+    networks:
+      - app-network
+
+  product-service:
+    build: ./product-service
+    ports:
+      - "3001:3001"
+    command: node app.js
+    networks:
+      - app-network
+
+  order-service:
+    build: ./order-service
+    ports:
+      - "3002:3002"
+    command: node app.js
+    networks:
+      - app-network
+
+  gateway-service:
+    build: ./gateway-service
+    ports:
+      - "3003:3003"
+    command: node app.js
+    depends_on:
+      - user-service
+      - product-service
+      - order-service
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
